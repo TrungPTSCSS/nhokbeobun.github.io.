@@ -1,0 +1,11 @@
+@keyframes loader{
+    from{
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+    to{
+        visibility: visible;
+        opacity:1;
+    }
+}

@@ -1,0 +1,366 @@
+body{
+    .aboutpage{
+        main{
+            .service-neo{
+                position: relative;
+                .slider{
+                    &-menu-hidden{
+                        width: 500px;
+                        background-color: $blue-cl;
+                        z-index: 99;
+                        height: 100%;
+                        position: fixed;
+                        top: 0;
+                        transform: translateX(-100%);
+                        transition: transform 0.75s cubic-bezier(1, 0.63, 0, 0.85);
+                        animation: out 1s ease-out forwards;
+                        a{
+                            color: $white-cl;
+                            text-transform: uppercase;
+                            font-size: 14px;
+                            font-weight: bold;
+                            font-family: ESB;
+                        }
+                        .ti{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin: 50px 35px 135px 20px;
+                            &-ri{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                img{
+                                    width: 30px;
+                                    height: 30px;
+                                    background-color: transparent;
+                                    margin: 0 10px;
+                                }
+                            }
+                        }
+                        .sli{
+                            display: flex;
+                            // justify-content: space-between;
+                            &-tit{
+                                width: 100%;
+                                p{
+                                    color: white;
+                                    text-transform: uppercase;
+                                    font-size: 16px;
+                                    font-weight: bold;
+                                    margin: 0 25px;
+                                    padding-left: 35px;
+                                    opacity: 0.5;
+                                }
+                                &-a{
+                                    position: relative;
+                                    margin:30px 0;
+                                    margin: 0 25px;
+                                    opacity: 0.5;
+                                    &::after{
+                                        position: absolute;
+                                        content: "";
+                                        width:0%;
+                                        background-color: $white-cl;
+                                        height: 1px;
+                                        top: 52px;
+                                    }
+                                    &:hover{
+                                        opacity: 1;
+                                        a{
+                                            transform: translateX(10%);
+                                            transition:transform 1s ;
+                                            font-size: 20px;
+                                            
+                                        }
+                                    }
+                                    &:hover::after{
+                                        width: 100%;
+                                        transition-property: width;
+                                        transition-duration: 1s;
+                                        
+                                    }
+                                }
+                                a{
+                                    font-size: 18px;
+                                    text-transform: uppercase;
+                                    padding-bottom: 35px;
+                                    padding-top: 20px;
+                                    padding-left: 35px;
+                                }
+                            }
+                            &-icon{
+                                padding-right: 25px;
+                                position: relative;
+                                padding-left: 30px;
+                                span{
+                                    position: absolute;
+                                    background-color: $white-cl;
+                                    width: 80px;
+                                    height: 1px;
+                                    left: 65%;
+                                    transform: translateX(-53%);
+                                    
+                                }
+                                img{
+                                    width: 40px;
+                                    height: 40px;
+                                    margin: 0 20px 22px 25px;
+                                    
+                                }
+                                &-x{
+                                    width: 33px;
+                                    height: 33px;
+                                    top: 25%;
+                                    left: 75%;
+                                    transform: translate(-97%, -50%);
+                                    /* padding-top: 30px; */
+                                    position: absolute;
+                                    cursor: pointer;
+                                    &:hover{
+                                        opacity: 0.5;
+                                    }
+                                    span{
+                                        position: absolute;
+                                        width: 50px;
+                                        cursor: pointer;
+                                        top: 16px;
+                                        left: -8px;
+                                        
+                                        &:nth-child(1){
+                                            transform: rotate(135deg);
+                                        }
+                                        &:nth-child(2){
+                                            transform: rotate(-135deg);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .open{
+                        transform: translate(0);
+                        transition: transform 1s cubic-bezier(1, 0.63, 0, 0.85);
+                        animation: in 1s ease-in forwards;
+                    }
+                    &-btme{
+                        width: 0px;
+                        position: absolute;
+                        top: 56%;
+                        color: $blue-cl;
+                        left: 25px;
+                        p{
+                            text-transform: uppercase;
+                            font-size: 12px;
+                            font-weight: bold;
+                        }
+                    }
+                    &-menu{
+                        background-color: $blue-cl;
+                        position: fixed;
+                        z-index: 1;
+                        left: -40px;
+                        top: 43%;
+                        transform: translate(0,-50%);
+                        width: 180px;
+                        height: 160px;
+                        cursor: pointer;
+                        display: flex;
+                        &-d{
+                            left: 60%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                            -webkit-transform: translate(-50%, -50%);
+                            -o-transform: translate(-50%, -50%);
+                            position: absolute;
+                            
+                        }
+                        &-icon{
+                            width: 40px;
+                            height: 45px;
+                            position: relative;
+                            display: block;
+                            span{
+                                position: absolute;
+                                margin-bottom: 3px;
+                                height: 1px;
+                                width: 100%;
+                                background: #bea67c;
+                                border-radius: 9px;
+                                opacity: 1;
+                                left: 0;
+                                transform: rotate(0deg);
+                                &:nth-child(1){
+                                    top: 10px;
+                                }
+                                &:nth-child(2){
+                                    top: 20px;
+                                }
+                                &:nth-child(3){
+                                    top: 30px;
+                                }
+                            }
+                        }
+                        img{
+                            width: 40px;
+                            height: 40px;
+                        }
+                        &:hover{
+                            width: 250px;
+                            transition-property: width;
+                            transition-duration: 0.75s;
+                            background-color: $white-cl;
+                            left: 0px;
+                            margin-left: -15px;
+                            padding-left: 15px;
+                            .slider-btme{
+                                color: black;
+                                margin-left: 15px;
+                                transition: 0.75s;
+                            }
+                            .slider-menu-d{
+                                img{
+                                    filter: brightness(0);
+                                }
+                            }
+                            .slider-menu-icon{
+                                span{
+                                    filter: brightness(0);
+                                    &:nth-child(1){
+                                        
+                                        top: 20px;
+                                        transform: translateX(-100%);
+                                        transition: transform 0.5s;
+                                    }
+                                    &:nth-child(3){
+                                        transform: scale(1.5);
+                                        transition: transform 0.1s;
+                                    }
+                                    &:nth-child(3){
+                                        left: 0px;
+                                        top: 20px;
+                                        transform: translateX(100%);
+                                        transition: transform 0.5s;
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+                .container{
+                    padding: 0 15px;
+                    margin: 0 auto;
+                    h2{
+                        text-transform: uppercase;
+                        font-size: 44px;
+                        font-family: EN;
+                        text-align: center;
+                        color: #745a2d;
+                        padding: 0;
+                    }
+                    h3{
+                        text-transform: uppercase;
+                            font-size: 26px;
+                            font-family: EN;
+                            padding: 0;
+                    }
+                    p{
+                        font-size: 14px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        padding-bottom: 60px;
+                        line-height: 20px;
+                        letter-spacing: 1px;
+                        text-align: center;
+                    }
+                    .col-md-10{
+                        padding: 15px;
+                        margin-top: 60px;
+                        position: relative;
+                        p{
+                            line-height: 30px;
+                        }
+                        span{
+                            width: 1px;
+                            height: 236px;
+                            background-color: black;
+                            position: absolute;
+                            left: 50%;
+                            transform: translate(-50%,0);
+                        }
+                    }
+                    .col-md-8{
+                        padding-top: 100px;
+                        .col-md-10{
+                            margin-top: 0;
+                            img{
+                                padding-bottom: 90px;
+                            }
+                            .col-md-8{
+                                padding: 0 15px;
+                            }
+                            .cont-btn{
+                                .left{
+                                    background-color: $blue-cl;
+                                color: white;
+                                border: 1px solid #bea67c;
+                                &:hover{
+                                    background-color: $white-cl;
+                                    color: black;
+                                    border: 1px solid black;
+                                }
+                                }
+                                
+                            }
+                                // .btn{
+                                //     display: flex;
+                                //     justify-content: space-between;
+                                //     a{
+                                //         width: 200px;
+                                //         height: 35px;
+                                //         border:1px solid $blue-cl;
+                                //         padding: 7px 15px;
+                                //         display: block;
+                                //         margin: 0 15px;
+                                //         &:hover{
+                                //             background-color: $blue-cl;
+                                //             color:white;
+
+                                //         }
+                                //     }
+                                // }
+                        }
+                    }
+                    .service-st{
+                        margin-top: 200px;
+                        display: flex;
+                        
+                        .col-md-6{
+                            padding: 0 15px;
+                            padding-bottom: 40px;
+                            p{
+                                padding-bottom: 50px;
+                                text-align: left;
+                                line-height: 35px;
+                                font-size: 14px;
+                            }
+                            .col-md-11{
+                                p{
+                                    padding-right: 41px;
+                                }
+                            }
+                        }
+                        .ri{
+                            
+                            margin-top: 85px;
+                            img{
+                                
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@keyframes tr {
+    from{
+        visibility:visible;
+        opacity: 0;
+    }
+    to{
+        opacity:1;
+    }
+}
+@keyframes tra {
+    from{
+        visibility:hidden;
+        opacity: 0;
+    }
+    to{
+        visibility: visible;
+        opacity:1;
+    }
+}

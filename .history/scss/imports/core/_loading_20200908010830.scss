@@ -1,0 +1,21 @@
+@keyframes tr {
+    from{
+        visibility:visible;
+        opacity: 0;
+    }
+    to{
+        opacity:1;
+    }
+}
+@include keyframes(topdown){
+    0%{
+        @include transform(translateY(-80px));
+        opacity: 0;
+        @include transition(0.3s);
+    }
+    100%{
+        @include transform(translateY(-10px));
+        opacity: 1;
+        @include transition(0.3s);
+    }
+}

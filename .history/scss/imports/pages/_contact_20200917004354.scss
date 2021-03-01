@@ -1,0 +1,224 @@
+
+body{
+    .contactpage{
+        main{
+            
+            .contact__bg{
+                position: relative;
+                background: url("/img/contact.jpg");
+                font-family: arial;
+                padding: 100px 0;
+                img{
+                    width: 100%;
+                }
+                .slider-menu{
+                    background-color: $blue-cl;
+                    position: fixed;
+                    left: 0px;
+                    top: 40%;
+                    transform: translate(0,-50%);
+                    width: 180px;
+                    height: 180px;
+                    z-index: 10;
+                    cursor: pointer;
+                    &-d{
+                        @include mid();
+                    }
+                    &-icon{
+                        width: 40px;
+                        height: 45px;
+                        position: relative;
+                        display: block;
+                        span{
+                            position: absolute;
+                            margin-bottom: 3px;
+                            height: 1px;
+                            width: 100%;
+                            background: #bea67c;
+                            border-radius: 9px;
+                            opacity: 1;
+                            left: 0;
+                            transform: rotate(0deg);
+                            &:nth-child(1){
+                                top: 10px;
+                            }
+                            &:nth-child(2){
+                                top: 20px;
+                            }
+                            &:nth-child(3){
+                                top: 30px;
+                            }
+                        }
+                    }
+                    img{
+                        width: 40px;
+                        height: 40px;
+                    }
+                    &:hover{
+                        width: 250px;
+                        transition-property: width;
+                        transition-duration: 0.75s;
+                        background-color: $white-cl;
+                        // left: 0px;
+                        margin-left: -15px;
+                        padding-left: 15px;
+                    }
+                }
+                .container{
+                    max-width: 771px;
+                    h5{
+                        color: #bea67c;
+                        text-transform: uppercase;
+                        font-size: 14px;
+                    }
+                    p{
+                        color: $white-cl;
+                        font-family: arial;
+                        font-size: 14px;
+                    }
+                    >.row:first-child{
+                        margin-bottom: 50px;
+                        // padding: 100px 0px 0 0 ;
+                    }
+                    .row{
+                        .col-md-6{
+                            .block{
+                                margin-top: 35px;
+                                .form-group{
+                                    margin-bottom: 30px;
+                                    input{
+                                        width: 100%;
+                                        background: transparent;
+                                        border:none;
+                                        border-bottom: 1px solid #bea67c;
+                                        color: $white-cl;
+                                        outline: none;
+                                    }
+                                    textarea{
+                                        width: 100%;
+                                        background-color: transparent;
+                                        background: url(/img/texta.png) center 32px repeat-x;
+                                        border: none;
+                                        outline: none;
+                                        color: #fff;
+                                        background-repeat: repeat-y;
+                                        background-size: 100%;
+                                        height: 96px;
+                                        line-height: 41px;
+                                        overflow: hidden;
+                                    }
+                                    label{
+                                        margin-bottom: 10px;
+                                        color: $white-cl;
+                                        display: block;
+
+                                    }
+                                }
+                            }
+                            
+                            
+                        }
+                        
+                        >.col-md-6:nth-child(2){
+                            padding: 0 15px 0 0 ;
+
+                        }
+                        .right{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-end;
+                            position: relative;
+                            .btn{
+                                background-color: $blue-cl;
+                                width: 85px;
+                                border: 1px solid #bea67c;
+                                position: absolute;
+                                bottom: -25px;
+                                right: 10px;
+                                
+                                // margin: 35px 0;
+                                a{
+                                    display: block;
+                                    padding: 10px 0;
+                                    color: $white-cl;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+
+            }
+            .btt{
+                display: none;
+                &-btop{
+                    position: fixed;
+                    background-color: rgba(20,75,100,0.9);
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    bottom: 0;
+                    right: 0;
+                    margin: 15px 15px;
+                    z-index: 999;
+                    .iconback{
+                        position: relative;
+                        width: 30px;
+                        height: 30px;
+                        overflow: hidden;
+                        @include mid();
+                        span{
+                            position: absolute;
+                            width: 100%;
+                            height: 2px;
+                            border-radius: 5px;
+                            background-color: #e4c113;
+                            &:nth-child(1){
+                                transform: rotate(45deg);
+                                top: 5px;
+                                right: -4px;
+                            }
+                            &:nth-child(2){
+                                transform: rotate(-45deg);
+                                top: 15px;
+                                left: -13px;
+                            
+                            }
+                        }
+                        // width: 30px;
+                        // height: 20px;
+                        
+                        // display: block;
+                        // @include mid();
+                        // img{
+                        //     padding: 5px;
+                        //     transform: rotate(270deg);
+                        // }
+                    }
+                }
+            }
+        }
+    }
+}
+@include mobile(){
+    body{
+        .contactpage{
+            main{
+                .contact__bg{
+                    .container{
+                        .row{
+                            >.col-md-6:nth-child(2){
+                                padding: 0 ;
+    
+                            }
+                        }
+                    }
+                }
+                .btt{
+                    display: block;
+                }
+            }
+        }
+    }
+}

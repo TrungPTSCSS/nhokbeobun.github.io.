@@ -1,0 +1,126 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+html,
+body {
+    width: 100%;
+    max-width: $max-width;
+    -webkit-font-smoothing: antialiased;
+    margin: auto;
+    @include text($fz-text, fmain, $lh-text, $text-cl, none);
+    background: $white-cl;
+    position: relative;
+    @include custom-scrollbar();
+    .mainwrapper {
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+    }
+    h1,h2,h3,h4,h5{
+        padding-bottom: 12px;
+        margin-bottom: 18px;
+        margin-top: 20px;
+    }
+    .carousel-cell {
+        width: 100%; /* full width */
+        height: 700px; /* height of carousel */
+        margin-right: 10px;
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .container{
+        // height: 1360px;
+        height: 100%;
+        .cover{
+            margin-top: 100px;
+            .col-md-5{
+                p{
+                    margin-top: 18px;
+                    
+                    line-height: 30px;
+                }
+            }
+            .left{
+                padding-right: 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                
+            }
+            .right{
+                padding-left: 15px;
+            }
+        }
+        .col-10{
+            margin-top: 42px;
+            
+        }
+        .cover2{
+            margin-top: 42px;
+            display: flex;
+            position: relative;
+            .col-6{
+                position: absolute;
+                z-index: 9;
+            }
+            h2{
+                margin-top: 20px;
+            }
+            .bt{
+                p{
+                    margin-top: 55px;
+                    line-height: 24px;
+                }
+            }
+            .left{
+                left: 0;
+                img{
+                    padding-right: 15px;
+                }
+            }
+            .right{
+                right: 0;
+                padding-left: 15px;
+            }
+        }
+    }
+    .bottom{
+        position: relative;
+        top: 230px;
+    }
+    .header-fix{
+        .logo{
+            margin: 0 40px;
+        }
+        &-container{
+            padding:0px 130px;
+            ul{
+                li{
+                    a{
+                        padding: 0px 40px;
+                        padding-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+    
+    @include desktop {
+        
+    }
+    @include tablet {
+        
+    }
+    @include mobile {
+        
+    }
+}

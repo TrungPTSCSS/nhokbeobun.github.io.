@@ -1,0 +1,68 @@
+@keyframes tr {
+    from{
+        visibility:visible;
+        opacity: 0;
+    }
+    to{
+        opacity:1;
+    }
+}
+@keyframes tra {
+    from{
+        visibility:visible;
+        opacity: 1;
+    }
+    to{
+        visibility: hidden;
+        opacity:0;
+    }
+}
+@keyframes loader{
+    from{
+        // transition: 0.5s;
+        transform: translateX(-100%);
+        visibility:visible;
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity:1;
+    }
+}
+@keyframes loader1{
+    from{
+        // transition: 0.5s;
+        transform: translateX(100%);
+        visibility:visible;
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity:1;
+    }
+}
+@keyframes loader2{
+    from{
+        // transition: 0.5s;
+        top: 285px;
+        visibility:visible;
+        opacity: 0;
+    }
+    to{
+        top: 91px;
+        transform: translateY(0);
+        opacity:1;
+    }
+}
+@keyframes loader3{
+    from{
+        // transition: 0.5s;
+        transform: translateY(100%);
+        visibility:visible;
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity:1;
+    }
+}
